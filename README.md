@@ -10,4 +10,8 @@ The starter project has some HTML and CSS styling to display a static version of
 
 To get started, open `js/app.js` and start building out the app's functionality
 
+The navigation bar logic is being managed by the the number of sections in the index.html.
+To add/remove the elements from navigation bar, we need to add/remove sections in index.html
+
+
 For specific, detailed instructions, look at the project instructions in the Udacity Classroom.

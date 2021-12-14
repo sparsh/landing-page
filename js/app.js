@@ -13,13 +13,11 @@
  *
  */
 
-// get the secions
-// add the secions inside nav bar
 const SECTION_PREFIX = "SECTION";
-const ACTIVE_CLASS = "active"
+const ACTIVE_CLASS = "active";
 
-/** 
- * Funtion to get the Navigation Items from Section Tag 
+/**
+ * Funtion to get the Navigation Items from Section Tag
  * */
 const getNavigationItems = () => {
   const navItems = [];
@@ -29,7 +27,6 @@ const getNavigationItems = () => {
   }
   return navItems;
 };
-
 
 /**
  * Scroll event used to navigate to section
@@ -42,7 +39,6 @@ const navigateToSection = (sectionIndex) => {
     inline: "center",
   });
 };
-
 
 /**
  * Logic to add Navigation bar inside the nav bar list class
@@ -68,38 +64,38 @@ const addNavigationBar = () => {
  * @param {*} section: The scrollable section
  * @returns boolean: true or false
  */
-const isInViewport =(section) => {
-    const rect = section.getBoundingClientRect();
-    return rect.top < window.innerHeight/2
-}
+const isInViewport = (section) => {
+  const rect = section.getBoundingClientRect();
+  return rect.top < window.innerHeight / 2;
+};
 
 /**
  * Removing the last active class from section and list
  */
 const removeLastActiveClasses = () => {
-    const lastActiveSecton = document.querySelector("section.active");
-    const lastActiveList =  document.querySelector("li.active");
-    lastActiveSecton.className = "";
-    lastActiveList.className = "";
-}
+  const lastActiveSecton = document.querySelector("section.active");
+  const lastActiveList = document.querySelector("li.active");
+  lastActiveSecton.className = "";
+  lastActiveList.className = "";
+};
 
 /**
  * Manages the logic to add/ remove active classes
  */
 const scrollListener = () => {
-    const sections = document.getElementsByTagName("section");
-    const lists = document.getElementsByTagName("li");
-    const scroll = () => {
-        for (i = 0; i < sections.length; i++) {
-            if(isInViewport(sections[i])) {
-                removeLastActiveClasses(i);
-                sections[i].className = ACTIVE_CLASS;
-                lists[i].className = ACTIVE_CLASS;
-            }
-          }
+  const sections = document.getElementsByTagName("section");
+  const lists = document.getElementsByTagName("li");
+  const scroll = () => {
+    for (i = 0; i < sections.length; i++) {
+      if (isInViewport(sections[i])) {
+        removeLastActiveClasses(i);
+        sections[i].className = ACTIVE_CLASS;
+        lists[i].className = ACTIVE_CLASS;
+      }
     }
-    document.addEventListener('scroll', scroll);
-}
+  };
+  document.addEventListener("scroll", scroll);
+};
 
 /**
  * Main Funtion
