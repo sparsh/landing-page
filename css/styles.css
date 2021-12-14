@@ -7,7 +7,7 @@
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
-
+@import url(./nav-item-mq.css);
 
 /* ---- Base Rules ---- */
 body {
@@ -66,16 +66,15 @@ section {
 /* Navigation Styles*/
 .navbar__menu ul {
     margin: 0;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    padding-inline-start:0px
 }
 
 .navbar__menu li {
     display: inline-block;
     color: black;
-    flex:1;
+    padding: 5px;
     cursor: pointer;
-    padding: 30px;
     
 }
 .navbar__menu .active {
@@ -129,6 +128,10 @@ section {
         max-width: 50em;
         padding: 4em;
     }
+}
+
+section {
+    border: 1px black solid;
 }
 
 section:nth-of-type(even) .landing__container {
