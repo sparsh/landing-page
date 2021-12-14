@@ -130,9 +130,6 @@ section {
     }
 }
 
-section {
-    border: 1px black solid;
-}
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
