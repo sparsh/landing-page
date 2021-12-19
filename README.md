@@ -1,17 +1,10 @@
-# Landing Page Project
+# Project Title
+Landing Page Project
 
-## Table of Contents
+# Project Description
+This project Aims to create a dynamic navigation bar, which would change according to new added sections. This can be a particularly useful trick when you begin working with content management systems or APIs when you are uncertain of where the items will be.
+# Credits
+This Project was made possible because of Udacity Front end Development Course.
 
-* [Instructions](#instructions)
-
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-The navigation bar logic is being managed by the the number of sections in the index.html.
-To add/remove the elements from navigation bar, we need to add/remove sections in index.html
-
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Flow
+Control start from index.html and inside index we are importing a js file with name app.js inside which the dynamic logic to add the navigaiton bar is there.
