@@ -22,7 +22,7 @@ const ACTIVE_CLASS = "active";
 const getNavigationItems = () => {
   const navItems = [];
   const sections = document.getElementsByTagName("section");
-  for (i = 1; i <= sections.length; i++) {
+  for (let i = 1; i <= sections.length; i++) {
     navItems.push(`${SECTION_PREFIX}-${i}`);
   }
   return navItems;
@@ -86,7 +86,7 @@ const scrollListener = () => {
   const sections = document.getElementsByTagName("section");
   const lists = document.getElementsByTagName("li");
   const scroll = () => {
-    for (i = 0; i < sections.length; i++) {
+    for (let i = 0; i < sections.length; i++) {
       if (isInViewport(sections[i])) {
         removeLastActiveClasses(i);
         sections[i].className = ACTIVE_CLASS;
