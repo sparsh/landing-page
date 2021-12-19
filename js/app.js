@@ -32,7 +32,9 @@ const getNavigationItems = () => {
  * Scroll event used to navigate to section
  * @param {*} sectionIndex : the index of section where we need to navigate to.
  */
-const navigateToSection = (sectionIndex) => {
+const navigateToSection = (event) => {
+  event.preventDefault();
+  const sectionIndex = event.target.id;
   const section = document.getElementsByTagName("section")[sectionIndex];
   section.scrollIntoView({
     behavior: "smooth",
@@ -48,10 +50,9 @@ const addNavigationBar = () => {
   const navItems = getNavigationItems();
   navItems.forEach((sectionItem, index) => {
     const li = document.createElement("li");
+    li.id = index;
+    document.addEventListener("click", navigateToSection)
     li.appendChild(document.createTextNode(sectionItem));
-    li.onclick = () => {
-      navigateToSection(index);
-    };
     if (index == 0) {
       li.className = ACTIVE_CLASS;
     }
